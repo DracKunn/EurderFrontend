@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div id="gallery" class="col-md-9">
+      <div class="gallery">
+        <div *ngFor="let item of items"
+             class="overview-item fader">
+
+          <div class="overlay">
+            <div class="overlay-text">{{item.name}}</div>
+          </div>
+          <img class="item-picture" [src]="'assets/images/'+item.name+'.jpg'" alt="item image">
+          <p class="price"><span>Price: {{item.price}} </span> Stock: {{item.stock}}</p>
+          <p class="stock-urgency">{{item.stockUrgency}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

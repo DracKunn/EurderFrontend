@@ -1,0 +1,12 @@
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px
+}
+
+.hugs-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0
+}

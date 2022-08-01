@@ -1,0 +1,41 @@
+.overview-item {
+  cursor: pointer
+}
+
+.overview-item {
+  display: inline-block;
+  position: relative;
+  line-height: 250px;
+  margin: 10px
+}
+
+.overview-item .overlay {
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: linear-gradient(180deg, rgba(33, 41, 44, 0) 0, #21292c 100%)
+}
+
+.overview-item.active img {
+  box-shadow: 0 4px 7px 2px #ef87c6
+}
+
+.overview-item {
+  transition: 0.2s ease-in-out;
+}
+
+.overview-item:hover, .overview-item.active {
+  transform: scale(1.03, 1.03);
+}
+
+.item-picture {
+  height: 240px
+}
+
+.small-item-picture {
+  height: 120px
+}
+
+
