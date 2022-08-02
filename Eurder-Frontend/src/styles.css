@@ -15,7 +15,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 .colored-background {
   color: #fff;
-  background-color: #31C46B
+  background-color: #c3c3c3
 }
 
 .pre-scrollable {
@@ -917,11 +917,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 .overlay-text {
-  color: #8F0B26;
+  color: cornflowerblue;
   margin-top: -60px;
-  text-align: center;
+  text-align: left;
   font-weight: 100;
-  font-family: Lato, sans-serif;
+  font-family: Tahoma, sans-serif;
   font-size: 40px;
-  font-style: italic
+  font-style: normal;
+  height: 10px;
 }

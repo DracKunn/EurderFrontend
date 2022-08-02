@@ -7,15 +7,15 @@
 
           <div class="overlay">
             <div class="overlay-text">{{item.name}}</div>
+            <div class="details">
+              <p class="details" >Price: {{item.price}} </p>
+              <p class="details">Stock: {{item.stock}}</p>
+              <p class="details">{{item.stockUrgency}}</p>
+            </div>
           </div>
           <img class="item-picture" [src]="'assets/images/'+item.name+'.jpg'" alt="item image">
-          <div class="detail-card">
-            <p class="price">Price: {{item.price}} </p>
-          </div>
-          <div class="detail-card">
-            <p class="stock">Stock: {{item.stock}}</p>
-          </div>
-          <p class="stock-urgency">{{item.stockUrgency}}</p>
+
+
         </div>
 
       </div>
