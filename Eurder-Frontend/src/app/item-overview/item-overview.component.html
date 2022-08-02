@@ -2,23 +2,83 @@
   <div class="row">
     <div id="gallery" class="col-md-9">
       <div class="gallery">
-        <div *ngFor="let item of items"
-             class="overview-item fader">
+        <div *ngFor="let item of items | nameFilter: searchText"
+             class="overview-item fader"
+             (click)="selectItem(item)"
+             [class.active]="selectedItem===item"
+        >
 
-          <div class="overlay">
-            <div class="overlay-text">{{item.name}}</div>
-            <div class="details">
-              <p class="details" >Price: {{item.price}} </p>
-              <p class="details">Stock: {{item.stock}}</p>
-              <p class="details">{{item.stockUrgency}}</p>
-            </div>
-          </div>
           <img class="item-picture" [src]="'assets/images/'+item.name+'.jpg'" alt="item image">
-
-
+          <div class="overlay">
+            <div class="overlay-text-item">{{item.name}}</div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="gallery-detail">
+        <section *ngIf="selectedItem"
+                 id="itemProfile" class="tiny-dialog fader">
+          <h3>{{selectedItem.name}}</h3>
+          <p>{{selectedItem.description}}</p>
+          <p>Price: {{selectedItem.price}} </p>
+          <p>Stock: {{selectedItem.stock}}</p>
+          <p> {{selectedItem.stockUrgency}}</p>
+        </section>
+
+        <section class="tiny-dialog">
+          <h3>Find an item</h3>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name"
+                   name="name"
+                   class="form-control"
+                   placeholder="Name"
+                   [(ngModel)]="searchText">
+          </div>
+        </section>
+
+        <section class="tiny-dialog">
+          <h3>Add Item</h3>
+          <form [formGroup]="addItemForm"
+                (ngSubmit)="addItemOnSubmit()"
+          >
+            <div>
+
+              <label>Name</label>
+              <input class="form-control"
+                     type="text" formControlName="name">
+            </div>
+            <div>
+              <label>description</label>
+              <input class="form-control"
+                     type="text" formControlName="description">
+            </div>
+            <div>
+              <label>Image</label>
+              <input class="form-control"
+                     type="text" formControlName="image">
+            </div>
+            <div>
+              <label>price</label>
+              <input class="form-control"
+                     type="number" formControlName="price">
+            </div>
+            <div>
+              <label>stock</label>
+              <input class="form-control"
+                     type="number" formControlName="stock">
+            </div>
+
+            <button class="button" type="submit">Add Item</button>
+
+          </form>
+        </section>
 
       </div>
     </div>
   </div>
 </div>
+
+

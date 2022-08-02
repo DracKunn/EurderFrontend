@@ -18,7 +18,7 @@
 }
 
 .overview-item.active img {
-  box-shadow: 0 4px 7px 2px #ef87c6
+  box-shadow: 0 4px 7px 2px cornflowerblue;
 }
 
 .overview-item {

@@ -9,9 +9,5 @@ i
 9Eurder-Frontend/src/app/layout/layout/layout.component.ts,0\c\0c7ba01273201fd640f51aff195664325c399ad9
 _
 /Eurder-Frontend/src/app/service/user.service.ts,7\1\715f1deb27e522c82ec46542fdac2095a8854993
-Q
-!Eurder-Frontend/src/model/Item.ts,4\7\475bd34383c69f3f1643d4f0abdbbfcb2af76124
 d
 4Eurder-Frontend/src/app/service/item.service.spec.ts,7\1\7143a8d755ca8fdf7c9ad74ba29dc79f35bc946e
-p
-@Eurder-Frontend/src/app/item-overview/item-overview.component.ts,b\f\bfff427b2ce79eecb3f86f17aeb4e81d80609eb3

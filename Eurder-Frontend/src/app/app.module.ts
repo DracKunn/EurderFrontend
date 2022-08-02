@@ -6,19 +6,24 @@ import {AppComponent} from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import {ItemOverviewComponent} from './item-overview/item-overview.component';
 import {HttpClientModule} from "@angular/common/http";
-import { UserComponent } from './user/user.component';
+import {UserComponent} from './user/user.component';
+import {NameFilterPipe} from './pipes/name-filter.pipe';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemOverviewComponent,
-    UserComponent
+    UserComponent,
+    NameFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

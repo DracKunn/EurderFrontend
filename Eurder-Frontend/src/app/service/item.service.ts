@@ -23,5 +23,9 @@ export class ItemService {
       ))
     )
   }
+
+  addItem(item: Item){
+    return this.http.post(this.backendItems, item)
+  }
 }
 
